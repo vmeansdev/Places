@@ -88,8 +88,8 @@
 		8555C14B2C42B767003F34A5 /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				8555C1A42C446A30003F34A5 /* App */,
 				8555C1632C42CDB8003F34A5 /* DI */,
-				8555C14C2C42B767003F34A5 /* PlacesApp.swift */,
 				8555C1522C42B768003F34A5 /* Preview Content */,
 				8555C1942C444D1F003F34A5 /* Resources */,
 				8555C15F2C42C642003F34A5 /* View */,
@@ -160,6 +160,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8555C1A42C446A30003F34A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8555C14C2C42B767003F34A5 /* PlacesApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
