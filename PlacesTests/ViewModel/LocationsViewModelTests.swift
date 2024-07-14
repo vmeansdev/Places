@@ -8,6 +8,8 @@
 import Foundation
 import XCTest
 @testable import Places
+@testable import PlacesData
+@testable import PlacesDataMocks
 
 final class LocationsViewModelTests: XCTestCase {
     var viewModel: LocationsViewModel!

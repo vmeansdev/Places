@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct LocationsResponse: Codable {
-    let locations: [Location]
+public struct LocationsResponse: Codable {
+    public let locations: [Location]
 }

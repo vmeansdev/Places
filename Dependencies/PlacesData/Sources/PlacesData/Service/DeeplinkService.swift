@@ -8,28 +8,28 @@
 import Foundation
 import UIKit
 
-protocol DeeplinkOpenerProtocol {
+public protocol DeeplinkOpenerProtocol {
     func openDeeplink(_ url: URL)
 }
 
 extension UIApplication: DeeplinkOpenerProtocol {
-    func openDeeplink(_ url: URL) {
+    public func openDeeplink(_ url: URL) {
         UIApplication.shared.open(url)
     }
 }
 
-protocol DeeplinkServiceProtocol {
+public protocol DeeplinkServiceProtocol {
     func openWiki(location: Location)
 }
 
-final class DeeplinkService: DeeplinkServiceProtocol {
+public final class DeeplinkService: DeeplinkServiceProtocol {
     private let deeplinkOpener: DeeplinkOpenerProtocol
 
-    init(deeplinkOpener: DeeplinkOpenerProtocol) {
+    public init(deeplinkOpener: DeeplinkOpenerProtocol) {
         self.deeplinkOpener = deeplinkOpener
     }
 
-    func openWiki(location: Location) {
+    public func openWiki(location: Location) {
         guard let url = buildURL(location: location) else {
             return
         }

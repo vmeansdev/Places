@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PlacesData
 
 final class LocationsViewModel: ObservableObject {
     enum State: Equatable {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,23 +11,14 @@
 		8555C14F2C42B767003F34A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C14E2C42B767003F34A5 /* ContentView.swift */; };
 		8555C1512C42B768003F34A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8555C1502C42B768003F34A5 /* Assets.xcassets */; };
 		8555C1542C42B768003F34A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8555C1532C42B768003F34A5 /* Preview Assets.xcassets */; };
-		8555C15B2C42B7C0003F34A5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C15A2C42B7C0003F34A5 /* Location.swift */; };
-		8555C15D2C42C07D003F34A5 /* LocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C15C2C42C07D003F34A5 /* LocationsService.swift */; };
-		8555C1622C42C667003F34A5 /* LocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1612C42C667003F34A5 /* LocationsResponse.swift */; };
 		8555C1652C42CDC7003F34A5 /* DependenciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1642C42CDC7003F34A5 /* DependenciesProvider.swift */; };
 		8555C1682C42D701003F34A5 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1672C42D701003F34A5 /* LocationsViewModel.swift */; };
-		8555C16A2C42FC9F003F34A5 /* DeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1692C42FC9F003F34A5 /* DeeplinkService.swift */; };
-		8555C17A2C44057E003F34A5 /* LocationsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1792C44057E003F34A5 /* LocationsServiceTests.swift */; };
-		8555C17F2C441571003F34A5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C17E2C441571003F34A5 /* MockURLProtocol.swift */; };
-		8555C1822C4417EA003F34A5 /* valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 8555C1812C4417EA003F34A5 /* valid.json */; };
-		8555C1842C441D75003F34A5 /* invalid_nullability.json in Resources */ = {isa = PBXBuildFile; fileRef = 8555C1832C441D75003F34A5 /* invalid_nullability.json */; };
-		8555C1862C44233F003F34A5 /* MockDeeplinkOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1852C44233F003F34A5 /* MockDeeplinkOpener.swift */; };
-		8555C1882C44236E003F34A5 /* DeeplinkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1872C44236E003F34A5 /* DeeplinkServiceTests.swift */; };
 		8555C18B2C442811003F34A5 /* LocationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C18A2C442811003F34A5 /* LocationsViewModelTests.swift */; };
-		8555C18D2C442842003F34A5 /* MockLocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C18C2C442842003F34A5 /* MockLocationsService.swift */; };
-		8555C18F2C44289B003F34A5 /* MockDeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C18E2C44289B003F34A5 /* MockDeeplinkService.swift */; };
 		8555C1912C4438F6003F34A5 /* OpenLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1902C4438F6003F34A5 /* OpenLocationView.swift */; };
 		8555C1932C444259003F34A5 /* FieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1922C444259003F34A5 /* FieldWithError.swift */; };
+		8555C19B2C4453A4003F34A5 /* PlacesData in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C19A2C4453A4003F34A5 /* PlacesData */; };
+		8555C1A12C445AF1003F34A5 /* PlacesData in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1A02C445AF1003F34A5 /* PlacesData */; };
+		8555C1A32C445E36003F34A5 /* PlacesDataMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1A22C445E36003F34A5 /* PlacesDataMocks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,22 +37,10 @@
 		8555C14E2C42B767003F34A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8555C1502C42B768003F34A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8555C1532C42B768003F34A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8555C15A2C42B7C0003F34A5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		8555C15C2C42C07D003F34A5 /* LocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsService.swift; sourceTree = "<group>"; };
-		8555C1612C42C667003F34A5 /* LocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsResponse.swift; sourceTree = "<group>"; };
 		8555C1642C42CDC7003F34A5 /* DependenciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesProvider.swift; sourceTree = "<group>"; };
 		8555C1672C42D701003F34A5 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
-		8555C1692C42FC9F003F34A5 /* DeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkService.swift; sourceTree = "<group>"; };
 		8555C16F2C440568003F34A5 /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8555C1792C44057E003F34A5 /* LocationsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsServiceTests.swift; sourceTree = "<group>"; };
-		8555C17E2C441571003F34A5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
-		8555C1812C4417EA003F34A5 /* valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = valid.json; sourceTree = "<group>"; };
-		8555C1832C441D75003F34A5 /* invalid_nullability.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = invalid_nullability.json; sourceTree = "<group>"; };
-		8555C1852C44233F003F34A5 /* MockDeeplinkOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeeplinkOpener.swift; sourceTree = "<group>"; };
-		8555C1872C44236E003F34A5 /* DeeplinkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkServiceTests.swift; sourceTree = "<group>"; };
 		8555C18A2C442811003F34A5 /* LocationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModelTests.swift; sourceTree = "<group>"; };
-		8555C18C2C442842003F34A5 /* MockLocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationsService.swift; sourceTree = "<group>"; };
-		8555C18E2C44289B003F34A5 /* MockDeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDeeplinkService.swift; sourceTree = "<group>"; };
 		8555C1902C4438F6003F34A5 /* OpenLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLocationView.swift; sourceTree = "<group>"; };
 		8555C1922C444259003F34A5 /* FieldWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldWithError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8555C19B2C4453A4003F34A5 /* PlacesData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8555C1A32C445E36003F34A5 /* PlacesDataMocks in Frameworks */,
+				8555C1A12C445AF1003F34A5 /* PlacesData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,13 +87,11 @@
 		8555C14B2C42B767003F34A5 /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				8555C1942C444D1F003F34A5 /* Resources */,
 				8555C1662C42D6ED003F34A5 /* ViewModel */,
 				8555C1632C42CDB8003F34A5 /* DI */,
-				8555C1602C42C64C003F34A5 /* Service */,
 				8555C15F2C42C642003F34A5 /* View */,
-				8555C15E2C42C638003F34A5 /* Model */,
 				8555C14C2C42B767003F34A5 /* PlacesApp.swift */,
-				8555C1502C42B768003F34A5 /* Assets.xcassets */,
 				8555C1522C42B768003F34A5 /* Preview Content */,
 			);
 			path = Places;
@@ -125,15 +105,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8555C15E2C42C638003F34A5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8555C15A2C42B7C0003F34A5 /* Location.swift */,
-				8555C1612C42C667003F34A5 /* LocationsResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8555C15F2C42C642003F34A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,15 +113,6 @@
 				8555C1922C444259003F34A5 /* FieldWithError.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		8555C1602C42C64C003F34A5 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				8555C15C2C42C07D003F34A5 /* LocationsService.swift */,
-				8555C1692C42FC9F003F34A5 /* DeeplinkService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		8555C1632C42CDB8003F34A5 /* DI */ = {
@@ -173,40 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				8555C1892C4427F6003F34A5 /* ViewModel */,
-				8555C1782C440570003F34A5 /* Service */,
 			);
 			path = PlacesTests;
-			sourceTree = "<group>";
-		};
-		8555C1782C440570003F34A5 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				8555C17B2C4412A6003F34A5 /* Mock */,
-				8555C1792C44057E003F34A5 /* LocationsServiceTests.swift */,
-				8555C1872C44236E003F34A5 /* DeeplinkServiceTests.swift */,
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		8555C17B2C4412A6003F34A5 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				8555C1802C4417BC003F34A5 /* Resources */,
-				8555C17E2C441571003F34A5 /* MockURLProtocol.swift */,
-				8555C1852C44233F003F34A5 /* MockDeeplinkOpener.swift */,
-				8555C18C2C442842003F34A5 /* MockLocationsService.swift */,
-				8555C18E2C44289B003F34A5 /* MockDeeplinkService.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
-		8555C1802C4417BC003F34A5 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8555C1832C441D75003F34A5 /* invalid_nullability.json */,
-				8555C1812C4417EA003F34A5 /* valid.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		8555C1892C4427F6003F34A5 /* ViewModel */ = {
@@ -215,6 +145,14 @@
 				8555C18A2C442811003F34A5 /* LocationsViewModelTests.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8555C1942C444D1F003F34A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8555C1502C42B768003F34A5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +171,9 @@
 			dependencies = (
 			);
 			name = Places;
+			packageProductDependencies = (
+				8555C19A2C4453A4003F34A5 /* PlacesData */,
+			);
 			productName = Places;
 			productReference = 8555C1492C42B767003F34A5 /* Places.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +192,10 @@
 				8555C1742C440568003F34A5 /* PBXTargetDependency */,
 			);
 			name = PlacesTests;
+			packageProductDependencies = (
+				8555C1A02C445AF1003F34A5 /* PlacesData */,
+				8555C1A22C445E36003F34A5 /* PlacesDataMocks */,
+			);
 			productName = PlacesTests;
 			productReference = 8555C16F2C440568003F34A5 /* PlacesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -283,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 8555C1402C42B767003F34A5;
+			packageReferences = (
+				8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */,
+			);
 			productRefGroup = 8555C14A2C42B767003F34A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -307,8 +255,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8555C1822C4417EA003F34A5 /* valid.json in Resources */,
-				8555C1842C441D75003F34A5 /* invalid_nullability.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,15 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8555C1622C42C667003F34A5 /* LocationsResponse.swift in Sources */,
 				8555C1932C444259003F34A5 /* FieldWithError.swift in Sources */,
 				8555C1912C4438F6003F34A5 /* OpenLocationView.swift in Sources */,
 				8555C14F2C42B767003F34A5 /* ContentView.swift in Sources */,
-				8555C15B2C42B7C0003F34A5 /* Location.swift in Sources */,
 				8555C1682C42D701003F34A5 /* LocationsViewModel.swift in Sources */,
 				8555C1652C42CDC7003F34A5 /* DependenciesProvider.swift in Sources */,
-				8555C16A2C42FC9F003F34A5 /* DeeplinkService.swift in Sources */,
-				8555C15D2C42C07D003F34A5 /* LocationsService.swift in Sources */,
 				8555C14D2C42B767003F34A5 /* PlacesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,13 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8555C1862C44233F003F34A5 /* MockDeeplinkOpener.swift in Sources */,
-				8555C18F2C44289B003F34A5 /* MockDeeplinkService.swift in Sources */,
-				8555C1882C44236E003F34A5 /* DeeplinkServiceTests.swift in Sources */,
-				8555C17F2C441571003F34A5 /* MockURLProtocol.swift in Sources */,
 				8555C18B2C442811003F34A5 /* LocationsViewModelTests.swift in Sources */,
-				8555C18D2C442842003F34A5 /* MockLocationsService.swift in Sources */,
-				8555C17A2C44057E003F34A5 /* LocationsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +533,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Dependencies/PlacesData;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8555C19A2C4453A4003F34A5 /* PlacesData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlacesData;
+		};
+		8555C1A02C445AF1003F34A5 /* PlacesData */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */;
+			productName = PlacesData;
+		};
+		8555C1A22C445E36003F34A5 /* PlacesDataMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */;
+			productName = PlacesDataMocks;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8555C1412C42B767003F34A5 /* Project object */;
 }

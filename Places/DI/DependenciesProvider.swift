@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PlacesData
 import UIKit
 
 final class DependenciesProvider: ObservableObject {

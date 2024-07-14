@@ -6,12 +6,12 @@
 //
 
 import Foundation
-@testable import Places
+@testable import PlacesData
 
-final class MockLocationsService: LocationsServiceProtocol {
-    var fetchLocationsResult: Result<[Location], Error>?
+public final class MockLocationsService: LocationsServiceProtocol {
+    public var fetchLocationsResult: Result<[Location], Error>?
 
-    func fetchLocations() async throws -> [Location] {
+    public func fetchLocations() async throws -> [Location] {
         switch fetchLocationsResult {
         case .success(let locations):
             return locations

@@ -7,23 +7,23 @@
 
 import Foundation
 
-class MockURLProtocol: URLProtocol {
-    enum MockURLProtocolError: Error {
+public final class MockURLProtocol: URLProtocol {
+    public enum MockURLProtocolError: Error {
         case notFound
     }
 
-    override class func canInit(with request: URLRequest) -> Bool {
+    public override class func canInit(with request: URLRequest) -> Bool {
         return true
     }
 
-    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+    public override class func canonicalRequest(for request: URLRequest) -> URLRequest {
         return request
     }
 
-    override func startLoading() {
+    public override func startLoading() {
         if let url = request.url,
            let fileName = url.lastPathComponent.components(separatedBy: ".").first,
-           let filePath = Bundle(for: type(of: self)).path(forResource: "\(fileName)", ofType: "json"),
+           let filePath = Bundle.module.path(forResource: "\(fileName)", ofType: "json"),
            let data = try? Data(contentsOf: URL(fileURLWithPath: filePath))
         {
             let response = URLResponse(url: url, mimeType: "application/json", expectedContentLength: data.count, textEncodingName: nil)
@@ -35,7 +35,7 @@ class MockURLProtocol: URLProtocol {
         }
     }
 
-    override func stopLoading() {
+    public override func stopLoading() {
         // No cleanup necessary
     }
 }

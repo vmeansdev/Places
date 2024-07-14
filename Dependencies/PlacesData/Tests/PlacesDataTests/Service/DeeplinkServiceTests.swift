@@ -7,7 +7,8 @@
 
 import Foundation
 import XCTest
-@testable import Places
+@testable import PlacesData
+@testable import PlacesDataMocks
 
 final class DeeplinkServiceTests: XCTestCase {
     var mockDeeplinkOpener: MockDeeplinkOpener!
