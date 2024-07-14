@@ -8,12 +8,18 @@
 import Foundation
 import SwiftUI
 
-struct FieldWithError: View {
+public struct FieldWithError: View {
     let title: String
     @Binding var text: String
     @Binding var showError: Bool
 
-    var body: some View {
+    public init(title: String, text: Binding<String>, showError: Binding<Bool>) {
+        self.title = title
+        self._text = text
+        self._showError = showError
+    }
+
+    public var body: some View {
         VStack(alignment: .leading) {
             TextField(title, text: $text)
                 .keyboardType(.decimalPad)

@@ -15,8 +15,8 @@
 		8555C1682C42D701003F34A5 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1672C42D701003F34A5 /* LocationsViewModel.swift */; };
 		8555C18B2C442811003F34A5 /* LocationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C18A2C442811003F34A5 /* LocationsViewModelTests.swift */; };
 		8555C1912C4438F6003F34A5 /* OpenLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1902C4438F6003F34A5 /* OpenLocationView.swift */; };
-		8555C1932C444259003F34A5 /* FieldWithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1922C444259003F34A5 /* FieldWithError.swift */; };
 		8555C19B2C4453A4003F34A5 /* PlacesData in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C19A2C4453A4003F34A5 /* PlacesData */; };
+		8555C19E2C4457CD003F34A5 /* PlacesUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C19D2C4457CD003F34A5 /* PlacesUI */; };
 		8555C1A12C445AF1003F34A5 /* PlacesData in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1A02C445AF1003F34A5 /* PlacesData */; };
 		8555C1A32C445E36003F34A5 /* PlacesDataMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1A22C445E36003F34A5 /* PlacesDataMocks */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		8555C16F2C440568003F34A5 /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8555C18A2C442811003F34A5 /* LocationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModelTests.swift; sourceTree = "<group>"; };
 		8555C1902C4438F6003F34A5 /* OpenLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLocationView.swift; sourceTree = "<group>"; };
-		8555C1922C444259003F34A5 /* FieldWithError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldWithError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8555C19E2C4457CD003F34A5 /* PlacesUI in Frameworks */,
 				8555C19B2C4453A4003F34A5 /* PlacesData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +72,7 @@
 				8555C14B2C42B767003F34A5 /* Places */,
 				8555C1702C440568003F34A5 /* PlacesTests */,
 				8555C14A2C42B767003F34A5 /* Products */,
+				8555C19F2C445AF1003F34A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,12 +88,12 @@
 		8555C14B2C42B767003F34A5 /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				8555C1942C444D1F003F34A5 /* Resources */,
-				8555C1662C42D6ED003F34A5 /* ViewModel */,
 				8555C1632C42CDB8003F34A5 /* DI */,
-				8555C15F2C42C642003F34A5 /* View */,
 				8555C14C2C42B767003F34A5 /* PlacesApp.swift */,
 				8555C1522C42B768003F34A5 /* Preview Content */,
+				8555C1942C444D1F003F34A5 /* Resources */,
+				8555C15F2C42C642003F34A5 /* View */,
+				8555C1662C42D6ED003F34A5 /* ViewModel */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -110,7 +111,6 @@
 			children = (
 				8555C14E2C42B767003F34A5 /* ContentView.swift */,
 				8555C1902C4438F6003F34A5 /* OpenLocationView.swift */,
-				8555C1922C444259003F34A5 /* FieldWithError.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -155,6 +155,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8555C19F2C445AF1003F34A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,6 +180,7 @@
 			name = Places;
 			packageProductDependencies = (
 				8555C19A2C4453A4003F34A5 /* PlacesData */,
+				8555C19D2C4457CD003F34A5 /* PlacesUI */,
 			);
 			productName = Places;
 			productReference = 8555C1492C42B767003F34A5 /* Places.app */;
@@ -230,6 +238,7 @@
 			mainGroup = 8555C1402C42B767003F34A5;
 			packageReferences = (
 				8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */,
+				8555C19C2C4457CD003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesUI" */,
 			);
 			productRefGroup = 8555C14A2C42B767003F34A5 /* Products */;
 			projectDirPath = "";
@@ -265,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8555C1932C444259003F34A5 /* FieldWithError.swift in Sources */,
 				8555C1912C4438F6003F34A5 /* OpenLocationView.swift in Sources */,
 				8555C14F2C42B767003F34A5 /* ContentView.swift in Sources */,
 				8555C1682C42D701003F34A5 /* LocationsViewModel.swift in Sources */,
@@ -539,12 +547,20 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Dependencies/PlacesData;
 		};
+		8555C19C2C4457CD003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesUI" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Dependencies/PlacesUI;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		8555C19A2C4453A4003F34A5 /* PlacesData */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlacesData;
+		};
+		8555C19D2C4457CD003F34A5 /* PlacesUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlacesUI;
 		};
 		8555C1A02C445AF1003F34A5 /* PlacesData */ = {
 			isa = XCSwiftPackageProductDependency;

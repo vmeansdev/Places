@@ -7,6 +7,7 @@
 
 import Foundation
 import PlacesData
+import PlacesUI
 import SwiftUI
 
 struct OpenLocationView: View {
