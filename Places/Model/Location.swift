@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Location: Codable, Identifiable {
+struct Location: Codable, Identifiable, Equatable {
     let id = UUID()
-    let name: String
+    let name: String?
     let latitude: Double
     let longitude: Double
 
@@ -19,7 +19,7 @@ struct Location: Codable, Identifiable {
         case longitude = "long"
     }
 
-    init(name: String, latitude: Double, longitude: Double) {
+    init(name: String?, latitude: Double, longitude: Double) {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
@@ -27,7 +27,7 @@ struct Location: Codable, Identifiable {
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? "N/A"
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
         self.latitude = try container.decode(Double.self, forKey: .latitude)
         self.longitude = try container.decode(Double.self, forKey: .longitude)
     }
