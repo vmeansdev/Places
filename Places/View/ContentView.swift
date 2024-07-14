@@ -34,7 +34,9 @@ struct ContentView: View {
                         }
                     }
                 case .error(let message):
-                    Text(message)
+                    ErrorView(errorMessage: message, actionButtonText: Constants.retryText) {
+                        viewModel.loadLocations()
+                    }
                 }
             }
             .navigationTitle(Constants.navigationTitle)
@@ -62,6 +64,7 @@ struct ContentView: View {
         static let notAvailable = "N/A"
         static let navigationTitle = "Places"
         static let addButtonImageName = "plus.magnifyingglass"
+        static let retryText = "Retry"
     }
 }
 
