@@ -28,6 +28,16 @@
 		8555C18F2C44289B003F34A5 /* MockDeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C18E2C44289B003F34A5 /* MockDeeplinkService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8555C1732C440568003F34A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8555C1412C42B767003F34A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8555C1482C42B767003F34A5;
+			remoteInfo = Places;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8555C1492C42B767003F34A5 /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8555C14C2C42B767003F34A5 /* PlacesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesApp.swift; sourceTree = "<group>"; };
@@ -54,6 +64,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		8555C1462C42B767003F34A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8555C16C2C440568003F34A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,9 +104,9 @@
 				8555C1662C42D6ED003F34A5 /* ViewModel */,
 				8555C1632C42CDB8003F34A5 /* DI */,
 				8555C1602C42C64C003F34A5 /* Service */,
+				8555C15F2C42C642003F34A5 /* View */,
 				8555C15E2C42C638003F34A5 /* Model */,
 				8555C14C2C42B767003F34A5 /* PlacesApp.swift */,
-				8555C14E2C42B767003F34A5 /* ContentView.swift */,
 				8555C1502C42B768003F34A5 /* Assets.xcassets */,
 				8555C1522C42B768003F34A5 /* Preview Content */,
 			);
@@ -111,6 +128,14 @@
 				8555C1612C42C667003F34A5 /* LocationsResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8555C15F2C42C642003F34A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8555C14E2C42B767003F34A5 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8555C1602C42C64C003F34A5 /* Service */ = {
@@ -237,7 +262,6 @@
 					8555C1482C42B767003F34A5 = {
 						CreatedOnToolsVersion = 15.4;
 					};
-				};
 					8555C16E2C440568003F34A5 = {
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = 8555C1482C42B767003F34A5;
