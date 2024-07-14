@@ -14,6 +14,7 @@
 		8555C15B2C42B7C0003F34A5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C15A2C42B7C0003F34A5 /* Location.swift */; };
 		8555C15D2C42C07D003F34A5 /* LocationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C15C2C42C07D003F34A5 /* LocationsService.swift */; };
 		8555C1622C42C667003F34A5 /* LocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1612C42C667003F34A5 /* LocationsResponse.swift */; };
+		8555C1652C42CDC7003F34A5 /* DependenciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1642C42CDC7003F34A5 /* DependenciesProvider.swift */; };
 		8555C1682C42D701003F34A5 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1672C42D701003F34A5 /* LocationsViewModel.swift */; };
 		8555C16A2C42FC9F003F34A5 /* DeeplinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1692C42FC9F003F34A5 /* DeeplinkService.swift */; };
 		8555C17A2C44057E003F34A5 /* LocationsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8555C1792C44057E003F34A5 /* LocationsServiceTests.swift */; };
@@ -36,6 +37,7 @@
 		8555C15A2C42B7C0003F34A5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8555C15C2C42C07D003F34A5 /* LocationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsService.swift; sourceTree = "<group>"; };
 		8555C1612C42C667003F34A5 /* LocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsResponse.swift; sourceTree = "<group>"; };
+		8555C1642C42CDC7003F34A5 /* DependenciesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesProvider.swift; sourceTree = "<group>"; };
 		8555C1672C42D701003F34A5 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		8555C1692C42FC9F003F34A5 /* DeeplinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkService.swift; sourceTree = "<group>"; };
 		8555C16F2C440568003F34A5 /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				8555C1662C42D6ED003F34A5 /* ViewModel */,
+				8555C1632C42CDB8003F34A5 /* DI */,
 				8555C1602C42C64C003F34A5 /* Service */,
 				8555C15E2C42C638003F34A5 /* Model */,
 				8555C14C2C42B767003F34A5 /* PlacesApp.swift */,
@@ -117,6 +120,14 @@
 				8555C1692C42FC9F003F34A5 /* DeeplinkService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		8555C1632C42CDB8003F34A5 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				8555C1642C42CDC7003F34A5 /* DependenciesProvider.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		8555C1662C42D6ED003F34A5 /* ViewModel */ = {
@@ -282,6 +293,7 @@
 				8555C14F2C42B767003F34A5 /* ContentView.swift in Sources */,
 				8555C15B2C42B7C0003F34A5 /* Location.swift in Sources */,
 				8555C1682C42D701003F34A5 /* LocationsViewModel.swift in Sources */,
+				8555C1652C42CDC7003F34A5 /* DependenciesProvider.swift in Sources */,
 				8555C16A2C42FC9F003F34A5 /* DeeplinkService.swift in Sources */,
 				8555C15D2C42C07D003F34A5 /* LocationsService.swift in Sources */,
 				8555C14D2C42B767003F34A5 /* PlacesApp.swift in Sources */,
