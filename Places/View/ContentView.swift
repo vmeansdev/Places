@@ -9,39 +9,58 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel: LocationsViewModel
+    @State private var isShowingAddLocationView = false
 
     init(viewModel: LocationsViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
     }
 
     var body: some View {
-        Group {
-            switch viewModel.state {
-            case .loading:
-                ProgressView()
-            case .loaded(let locations):
-                List(locations, id: \.id) { location in
-                    VStack(alignment: .leading) {
-                        Text("\(location.name ?? Constants.notAvailable)")
-                            .font(.headline)
-                        Text("\(location.latitude), \(location.longitude)")
-                            .font(.caption)
-                    }.onTapGesture {
-                        viewModel.openWiki(location: location)
+        NavigationView {
+            Group {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView()
+                case .loaded(let locations):
+                    List(locations, id: \.id) { location in
+                        VStack(alignment: .leading) {
+                            Text("\(location.name ?? Constants.notAvailable)")
+                                .font(.headline)
+                            Text("\(location.latitude), \(location.longitude)")
+                                .font(.caption)
+                        }.onTapGesture {
+                            viewModel.openWiki(location: location)
+                        }
                     }
+                case .error(let message):
+                    Text(message)
                 }
-            case .error(let message):
-                Text(message)
             }
-        }.onAppear {
-            viewModel.loadLocations()
-        }.onDisappear {
-            viewModel.cancelLoading()
+            .navigationTitle(Constants.navigationTitle)
+            .toolbar(content: {
+                Button(action: {
+                    isShowingAddLocationView.toggle()
+                }) {
+                    Image(systemName: Constants.addButtonImageName)
+                }
+            })
+            .sheet(isPresented: $isShowingAddLocationView) {
+                OpenLocationView { location in
+                    viewModel.openWiki(location: location)
+                }
+            }
+            .onAppear {
+                viewModel.loadLocations()
+            }.onDisappear {
+                viewModel.cancelLoading()
+            }
         }
     }
 
     private enum Constants {
         static let notAvailable = "N/A"
+        static let navigationTitle = "Places"
+        static let addButtonImageName = "plus.magnifyingglass"
     }
 }
 
