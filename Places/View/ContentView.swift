@@ -5,6 +5,7 @@
 //  Created by Nikita Kononenko on 13.07.2024.
 //
 
+import PlacesUI
 import SwiftUI
 
 struct ContentView: View {
@@ -20,7 +21,7 @@ struct ContentView: View {
             Group {
                 switch viewModel.state {
                 case .loading:
-                    ProgressView()
+                    LoadingView()
                 case .loaded(let locations):
                     List(locations, id: \.id) { location in
                         VStack(alignment: .leading) {
