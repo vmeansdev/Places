@@ -1,0 +1,13 @@
+//
+//  Places.xcconfig
+//  Places
+//
+//  Created by Nikita Kononenko on 15.07.2024.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// workaround for a url in xcconfig file
+PROTOCOL = https:/
+PLACES_URL = $(PROTOCOL)/raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json

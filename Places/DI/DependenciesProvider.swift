@@ -7,11 +7,16 @@
 
 import Foundation
 import PlacesData
+import PlistReader
 import UIKit
 
 final class DependenciesProvider: ObservableObject {
+    private(set) lazy var plistReader: PlistReader = {
+        .init(bundle: Bundle.main)
+    }()
+
     func makeLocationsService() -> LocationsServiceProtocol {
-        guard let url = URL(string: Constants.locationsURLString) else {
+        guard let url = URL(string: try! plistReader.value(for: Constants.locationsURLKey)) else {
             fatalError("locationsURLString is not a valid URL")
         }
         return LocationsService(locationsURL: url)
@@ -26,6 +31,6 @@ final class DependenciesProvider: ObservableObject {
     }
 
     private enum Constants {
-        static let locationsURLString = "https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json"
+        static let locationsURLKey = "PLACES_URL"
     }
 }
