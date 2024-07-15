@@ -19,6 +19,7 @@
 		8555C19E2C4457CD003F34A5 /* PlacesUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C19D2C4457CD003F34A5 /* PlacesUI */; };
 		8555C1A12C445AF1003F34A5 /* PlacesData in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1A02C445AF1003F34A5 /* PlacesData */; };
 		8555C1A32C445E36003F34A5 /* PlacesDataMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1A22C445E36003F34A5 /* PlacesDataMocks */; };
+		8555C1AB2C454D32003F34A5 /* PlistReader in Frameworks */ = {isa = PBXBuildFile; productRef = 8555C1AA2C454D32003F34A5 /* PlistReader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8555C1AB2C454D32003F34A5 /* PlistReader in Frameworks */,
 				8555C19E2C4457CD003F34A5 /* PlacesUI in Frameworks */,
 				8555C19B2C4453A4003F34A5 /* PlacesData in Frameworks */,
 			);
@@ -189,6 +191,7 @@
 			packageProductDependencies = (
 				8555C19A2C4453A4003F34A5 /* PlacesData */,
 				8555C19D2C4457CD003F34A5 /* PlacesUI */,
+				8555C1AA2C454D32003F34A5 /* PlistReader */,
 			);
 			productName = Places;
 			productReference = 8555C1492C42B767003F34A5 /* Places.app */;
@@ -247,6 +250,7 @@
 			packageReferences = (
 				8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */,
 				8555C19C2C4457CD003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesUI" */,
+				8555C1A92C454D31003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlistReader" */,
 			);
 			productRefGroup = 8555C14A2C42B767003F34A5 /* Products */;
 			projectDirPath = "";
@@ -559,6 +563,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = Dependencies/PlacesUI;
 		};
+		8555C1A92C454D31003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlistReader" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Dependencies/PlistReader;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -579,6 +587,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8555C1992C4453A4003F34A5 /* XCLocalSwiftPackageReference "Dependencies/PlacesData" */;
 			productName = PlacesDataMocks;
+		};
+		8555C1AA2C454D32003F34A5 /* PlistReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PlistReader;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
