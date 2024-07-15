@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel: LocationsViewModel
-    @State private var isShowingAddLocationView = false
+    @State private var isShowingOpenLocationView = false
 
     init(viewModel: LocationsViewModel) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -22,35 +22,49 @@ struct ContentView: View {
                 switch viewModel.state {
                 case .loading:
                     LoadingView()
+                        .accessibilityLabel(Constants.loadingLabel)
                 case .loaded(let locations):
                     List(locations, id: \.id) { location in
                         VStack(alignment: .leading) {
-                            Text("\(location.name ?? Constants.notAvailable)")
+                            let locationName = location.name ?? Constants.notAvailable
+                            Text("\(locationName)")
                                 .font(.headline)
+                                .accessibilityLabel("\(Constants.locationNameText): \(locationName)")
                             Text("\(location.latitude), \(location.longitude)")
                                 .font(.caption)
+                                .accessibilityLabel("\(Constants.latitudeText): \(location.latitude), \(Constants.longitudeText): \(location.longitude)")
                         }.onTapGesture {
                             viewModel.openWiki(location: location)
                         }
+                        .accessibilityAction {
+                            viewModel.openWiki(location: location)
+                        }
+                        .accessibilityElement(children: .combine)
+                        .accessibilityHint(Constants.locationHintText)
                     }
                 case .error(let message):
                     ErrorView(errorMessage: message, actionButtonText: Constants.retryText) {
                         viewModel.loadLocations()
                     }
+                    .accessibilityLabel("\(Constants.errorLabel): \(message)")
+                    .accessibilityHint(Constants.errorHint)
                 }
             }
             .navigationTitle(Constants.navigationTitle)
             .toolbar(content: {
                 Button(action: {
-                    isShowingAddLocationView.toggle()
+                    isShowingOpenLocationView.toggle()
                 }) {
-                    Image(systemName: Constants.addButtonImageName)
+                    Image(systemName: Constants.openButtonImageName)
                 }
+                .accessibilityLabel(Constants.openLocationLabel)
+                .accessibilityHint(Constants.openLocationHint)
             })
-            .sheet(isPresented: $isShowingAddLocationView) {
+            .sheet(isPresented: $isShowingOpenLocationView) {
                 OpenLocationView { location in
                     viewModel.openWiki(location: location)
                 }
+                .accessibilityLabel(Constants.openNewLocationLabel)
             }
             .onAppear {
                 viewModel.loadLocations()
@@ -63,8 +77,18 @@ struct ContentView: View {
     private enum Constants {
         static let notAvailable = "N/A"
         static let navigationTitle = "Places"
-        static let addButtonImageName = "plus.magnifyingglass"
+        static let openButtonImageName = "plus.magnifyingglass"
         static let retryText = "Retry"
+        static let loadingLabel = "Loading"
+        static let locationNameText = "Location name"
+        static let latitudeText = "Latitude"
+        static let longitudeText = "Longitude"
+        static let locationHintText = "Tap to open a location in Wikipedia app"
+        static let errorLabel = "Error"
+        static let errorHint = "Tap to retry loading locations"
+        static let openLocationLabel = "Open location"
+        static let openLocationHint = "Tap to open a new location"
+        static let openNewLocationLabel = "Open a new location view"
     }
 }
 
