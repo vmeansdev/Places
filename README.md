@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Places app is a technical assignment for ABN Amro Bank, designed to demonstrate the capability to fetch, display, and interact with location data using the Wikipedia app via deep linking. The app fetches locations from a specified URL, displays them in a list, and allows users to open each location in the Wikipedia app. Additionally, users can manually enter a custom location to open in the Wikipedia app.
+The Places app is a technical assignment for ABN Amro Bank, designed to demonstrate the capability to fetch, display, and interact with location data using the Wikipedia app via deep linking. The app fetches locations from a specified URL, displays them in a list, and allows users to open each location in the Wikipedia app. Additionally, users can manually enter a custom location to open in the Wikipedia app. As a result, a manualy entered location is stored in the list of all locations.
 
 ## Features
 
@@ -10,6 +10,7 @@ The Places app is a technical assignment for ABN Amro Bank, designed to demonstr
 - Display locations in a list.
 - Open locations in the Wikipedia app via deep linking.
 - Manually enter custom locations to open in the Wikipedia app.
+- Store a manually entered location in a list
 - UI is implemented using SwiftUI
 
 ## Setup
@@ -51,11 +52,9 @@ PLACES_URL = https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/
 ## Assumptions
 
 - Only the name of a location is optional; coordinates are required.
-- Custom locations entered by the user are not stored in the initial list and are opened only upon tapping the "Open" button.
 
 ## Possible future Improvements
 
-- App icon
 - SwiftLint and SwiftFormat integration
 - Localization support
 - Enhanced color scheme
