@@ -10,7 +10,7 @@ import PlacesData
 import PlistReader
 import UIKit
 
-final class DependenciesProvider: ObservableObject {
+final class DependenciesProvider {
     private(set) lazy var plistReader: PlistReader = {
         .init(bundle: Bundle.main)
     }()
