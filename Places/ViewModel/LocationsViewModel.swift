@@ -26,12 +26,16 @@ final class LocationsViewModel: ObservableObject {
     }
 
     func loadLocations() {
+        var loadedLocations: [Location] = []
+        if case let .loaded(previouslyLoadedLocations) = state {
+            loadedLocations = previouslyLoadedLocations
+        }
         state = .loading
         cancellationToken?.cancel()
-        cancellationToken = Task {
+        cancellationToken = Task { [loadedLocations] in
             do {
                 let locations = try await locationsService.fetchLocations()
-                await update(state: .loaded(locations))
+                await update(state: .loaded(Array(Set(loadedLocations + locations))))
             } catch {
                 await update(state: .error(error.localizedDescription))
             }
@@ -45,6 +49,11 @@ final class LocationsViewModel: ObservableObject {
 
     func openWiki(location: Location) {
         deeplinkService.openWiki(location: location)
+        if case let .loaded(locations) = state, !locations.contains(location) {
+            state = .loaded(locations + [location])
+        } else {
+            state = .loaded([location])
+        }
     }
 
     @MainActor

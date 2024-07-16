@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Location: Codable, Identifiable, Equatable {
+public struct Location: Codable, Identifiable, Equatable, Hashable {
     public let id = UUID()
     public let name: String?
     public let latitude: Double
@@ -30,5 +30,15 @@ public struct Location: Codable, Identifiable, Equatable {
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
         self.latitude = try container.decode(Double.self, forKey: .latitude)
         self.longitude = try container.decode(Double.self, forKey: .longitude)
+    }
+
+    public static func == (lhs: Location, rhs: Location) -> Bool {
+        lhs.name == rhs.name && lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(latitude)
+        hasher.combine(longitude)
     }
 }
