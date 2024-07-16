@@ -17,7 +17,7 @@ struct OpenLocationView: View {
     @State private var longitude: String = ""
     @State private var shouldDisplayError = false
 
-    var onSave: (Location) -> Void
+    var onOpen: (Location) -> Void
 
     var body: some View {
         NavigationView {
@@ -26,10 +26,20 @@ struct OpenLocationView: View {
                     TextField(Constants.nameText, text: $name)
                         .accessibilityLabel(Constants.nameFieldLabel)
                         .accessibilityHint(Constants.nameFieldHint)
-                    FieldWithError(title: Constants.latitudeText, text: $latitude, showError: $shouldDisplayError)
+                    FieldWithError(
+                        title: Constants.latitudeText,
+                        errorText: Constants.invalidLatitudeText,
+                        text: $latitude,
+                        showError: $shouldDisplayError
+                    )
                         .accessibilityLabel(Constants.latitudeLabel)
                         .accessibilityHint(Constants.latitudeFieldHint)
-                    FieldWithError(title: Constants.longitudeText, text: $longitude, showError: $shouldDisplayError)
+                    FieldWithError(
+                        title: Constants.longitudeText,
+                        errorText: Constants.invalidLongitudeText,
+                        text: $longitude,
+                        showError: $shouldDisplayError
+                    )
                         .accessibilityLabel(Constants.longitudeLabel)
                         .accessibilityHint(Constants.longitudeFieldHint)
                 }
@@ -52,11 +62,11 @@ struct OpenLocationView: View {
     }
 
     private func handleSave() {
-        guard !latitude.isEmpty, !longitude.isEmpty else {
+        guard CoordinatesInputValidator.isValidLatitude(latitude), CoordinatesInputValidator.isValidLongitude(longitude) else {
             shouldDisplayError = true
             return
         }
-        onSave(
+        onOpen(
             Location(
                 name: name.isEmpty ? nil : name,
                 latitude: Double(latitude) ?? 0,
@@ -81,9 +91,11 @@ struct OpenLocationView: View {
         static let openPlaceText = "Open a new place"
         static let cancelText = "Cancel"
         static let cancelHint = "Tap to cancel and go back to the previous screen"
+        static let invalidLatitudeText = "Invalid latitude! Please enter a value in a range from -90 to 90"
+        static let invalidLongitudeText = "Invalid longitude! Please enter a value in a range from -180 to 180"
     }
 }
 
 #Preview {
-    OpenLocationView(onSave: { _ in })
+    OpenLocationView(onOpen: { _ in })
 }
